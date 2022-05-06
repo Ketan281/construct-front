@@ -1,24 +1,24 @@
 import React from "react";
-import styles from "./Home.module.css";
-// import { useDispatch } from "react-redux";
-// import {getQuery } from "../Redux/action";
+import styles from "./home.module.css";
+import { useDispatch } from "react-redux";
+import {getQuery } from "../Redux/action";
 import { Link } from 'react-router-dom';
-import { HomepageProduct } from "../Homepageproducts/Homepageproducts";
+import { HomepageProduct } from "./Homepageproducts/Homepageproducts";
 
 const Home = ()=>{
-    // const dispatch = useDispatch();
-    // const getSares = ()=>{
-    //     dispatch(getQuery("Sarees"))
-    // }
-    // const getDreses = ()=>{
-    //     dispatch(getQuery("Dresses"))
-    // }
-    // const getMenswares = ()=>{
-    //     dispatch(getQuery("Mens Top Wear"))
-    // }
-    // const homeCare = ()=>{
-    //     dispatch(getQuery("Home and Kitchen"))
-    // }
+    const dispatch = useDispatch();
+    const getSares = ()=>{
+        dispatch(getQuery("Sarees"))
+    }
+    const getDreses = ()=>{
+        dispatch(getQuery("Dresses"))
+    }
+    const getMenswares = ()=>{
+        dispatch(getQuery("Mens Top Wear"))
+    }
+    const homeCare = ()=>{
+        dispatch(getQuery("Home and Kitchen"))
+    }
     return (
         <div>
             <div className={styles.banner}>
@@ -45,16 +45,16 @@ const Home = ()=>{
             </div>
             <div className={styles.banner1}>
                 <div className={styles.img}>
-                    <Link to='/cat'><img  src="https://images.meesho.com/images/marketing/1631611172021.png"/></Link>
+                    <Link to='/cat'><img onClick={getSares} src="https://images.meesho.com/images/marketing/1631611172021.png"/></Link>
                 </div>
                 <div className={styles.temp}>
-                    <Link to='/cat'><img src="https://images.meesho.com/images/marketing/1631610854491.png"/></Link>
+                    <Link to='/cat'><img onClick={getDreses} src="https://images.meesho.com/images/marketing/1631610854491.png"/></Link>
                 </div>
                 <div className={styles.temp}>
-                    <Link to='/cat'><img  src="https://images.meesho.com/images/marketing/1631611208025.png"/></Link>
+                    <Link to='/cat'><img onClick={getMenswares} src="https://images.meesho.com/images/marketing/1631611208025.png"/></Link>
                 </div>
             </div>
-            <Link style={{textDecoration:'none'}} to="/cat"><div  className={styles.banner2}>
+            <Link style={{textDecoration:'none'}} to="/cat"><div onClick={homeCare} className={styles.banner2}>
                 <div className={styles.tbox}>
                     <span>Homecare</span>
                     <button>VIEW ALL</button>
@@ -103,8 +103,8 @@ const Home = ()=>{
                         
                         <div className={styles.logos}>
 
-                        <img src="https://images.meesho.com/images/pow/playstore-icon-big.webp" alt="playstore" />
-                        <img src="https://images.meesho.com/images/pow/appstore-icon-big.webp" alt="apple"/>
+                        <img src="https://meesho.com/_next/static/images/google-play-button-1f2aa747a3eefa161840b04e057b31ac.png" alt="playstore" />
+                        <img src="https://meesho.com/_next/static/images/appstore-button-4b171cf04fe0557718dfd2cbf309c61d.png" alt="apple"/>
                         </div>
                     
                 </div>

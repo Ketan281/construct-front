@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { useState, useEffect } from 'react';
 import axios from "axios"
 import { Link } from "react-router-dom";
 import "./Homepageproducts.css"
-
+import React from "react";
 export const HomepageProduct = () => {
 
     const [product, setProduct] = useState([]);
@@ -18,6 +18,7 @@ export const HomepageProduct = () => {
             setProduct([...data]) 
             
     })
+
 }
 
     return (
@@ -49,7 +50,7 @@ export const HomepageProduct = () => {
                        <span className="fa fa-star checked"></span>
                        {el.rating}
                        </div>
-                       {/* <AddShoppingCartIcon style={{marginTop:'8px',color:'#5585F8'}}/> */}
+                    
                    </div>
                </div>
                 </Link>

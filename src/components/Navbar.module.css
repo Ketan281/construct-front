@@ -23,6 +23,7 @@
 
 .header_logo > *{
     height: 70px;
+    margin: 0rem 10% 0% 0%;
     margin-left: -100%;
 }
 .Search_Input{
@@ -122,11 +123,7 @@ p {
     min-height: fit-content;
     display: none;
     /* align-self: center; */
-}
-.LinkContent{
-    margin-top: 3.75%;
-    font-weight: 500;
-    font-stretch: expanded;
+
 }
 .profileCard{
     display: inline;
